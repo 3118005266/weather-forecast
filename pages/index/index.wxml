@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="top">
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        {{region[1]}}-{{region[2]}} <text style="font-size:14px;display:block;hight:40px;line-height:40px">(点击选择城市)</text>
+      </view>
+    </picker>
+
+    <view class="title">
+      {{region[2]}}实时天气
+    </view>
+    <view class="title">
+      更新时间:{{reporttime}}
+    </view>
+    
+    <view class="weather">
+        <text class="none" style="display:{{dis}}">选择城市</text>
+        <text> {{getWeather}}</text>
+    </view>
+  </view>
+
+  <view class="biaoti">
+    未来三天天气
+  </view>
+  <view class="one">
+    <view class="dates" decode="true">{{onedate}} {{region[2]}}</view>
+    <view class="temp">{{onedaytemp}}</view>
+    <view class="weath">{{onenighttemp}}</view>
+  </view>
+  <view class="two">
+    <view class="dates">{{twodate}} {{region[2]}}</view>
+    <view class="temp">{{twodaytemp}}</view>
+    <view class="weath">{{twonighttemp}}</view>
+  </view>
+  <view class="three">
+    <view class="dates">{{thrdate}} {{region[2]}}</view>
+    <view class="temp">{{thrdaytemp}}</view>
+    <view class="weath">{{thrnighttemp}}</view>
+  </view>
+
+</view>
